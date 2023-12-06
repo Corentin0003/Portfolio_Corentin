@@ -1,3 +1,3 @@
+Options +FollowSymlinks
 RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^.]+)$ $1.html [NC,L]
+RewriteRule ^projet_1$ projets/projet_1.html [L]
