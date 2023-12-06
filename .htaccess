@@ -1,0 +1,9 @@
+# rewrite_mods start here
+RewriteEngine on
+
+# Make rule does not apply to folders
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Check if file contain .html extension
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
