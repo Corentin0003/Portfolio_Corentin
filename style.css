@@ -1,0 +1,60 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    color: white;
+}
+
+h1{
+    font-size: 25px;
+    color: white;
+}
+
+nav{
+    background-color: black;
+}
+
+.nav-link{
+    color: white;
+}
+
+.selected-work{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: black;
+    display: block;
+}
+
+.selected-work-list-desktop{
+    margin-top: 180px;
+}
+
+.selected-work-list-first, .selected-work-list-second, .selected-work-list-third{
+    margin-bottom: 180px;
+}
+
+.mobile{
+    display: none;
+}
+
+.desktop{
+    display: block;
+}
+
+.index{
+    position: absolute;
+    top: 100%;
+    z-index: 10;
+    color: white;
+}
+
+
+thead{
+ visibility: hidden;
+ color: white;
+}
+
+td{
+    color: white;
+    
+}
