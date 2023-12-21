@@ -5,8 +5,15 @@
 }
 
 h1{
-    font-size: 25px;
+    font-size: 20px;
     color: white;
+}
+
+h2{
+        -webkit-text-stroke-width: 0.8px;
+        -webkit-text-stroke-color: white;
+        color: black;
+        font-size: 50px;
 }
 
 nav{
@@ -26,7 +33,7 @@ nav{
 }
 
 .selected-work-list-desktop{
-    margin-top: 180px;
+    margin-top: 110px;
 }
 
 .selected-work-list-first, .selected-work-list-second, .selected-work-list-third{
@@ -52,9 +59,20 @@ nav{
 thead{
  visibility: hidden;
  color: white;
+ display: flex;
+ height: 20px;
 }
 
 td{
     color: white;
     
+}
+
+.index-title{
+    visibility: visible;
+    position: absolute;
+    top: -50px;
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: -50px;
 }
