@@ -1,76 +1,84 @@
-  // Favicon animation
-  var current = 0;
-  var icons = ['favicon/C.png', 'favicon/O.png', 'favicon/R.png', 'favicon/E.png', 'favicon/N.png', 'favicon/T.png', 'favicon/I.png', 'favicon/N.png'];
+// Favicon animation
+var current = 0;
+var icons = ['../favicon/C.png', '../favicon/O.png', '../favicon/R.png', '../favicon/E.png', '../favicon/N.png', '../favicon/T.png', '../favicon/I.png', '../favicon/N.png'];
 
-  setInterval(function () {
-      var icon = (++current % icons.length);
-      var url = icons[icon];
-      document.getElementById('icon-a').href = url;
-      document.getElementById('icon-b').href = url;
-  }, 500);
+setInterval(function () {
+    var icon = (++current % icons.length);
+    var url = icons[icon];
+    document.getElementById('icon-a').href = url;
+    document.getElementById('icon-b').href = url;
+}, 500);
 
-  const content = [
+const content = [
+    
     {
-        "title": "Projet 1",
-        "domain": "Typo",
-        "year": "2023"
+        "title": "Daido Moryama",
+        "domain": "Interface",
+        "year": "2019",
+        "link": "projet_1.html"
     },
     {
-        "title": "Projet 2",
-        "domain": "Graphisme",
-        "year": "2024"
+        "title": "Exquisite Times",
+        "domain": "Layout",
+        "year": "2019",
+        "link": "exquisite_times.html"
     },
     {
-        "title": "Projet 3",
+        "title": "EAA Opendays",
+        "domain": "Visual Identity",
+        "year": "2019",
+        "link": "projet_1.html"
+    },
+    {
+        "title": "Union Neuchâtel",
         "domain": "Photographie",
-        "year": "2025"
+        "year": "2021",
+        "link": "union_neuchatel_basket"
     },
     {
-        "title": "Projet 3",
-        "domain": "Photographie",
-        "year": "2025"
+        "title": "Album cover",
+        "domain": "Graphic design",
+        "year": "2022",
+        "link": "projet_1.html"
     },
     {
-        "title": "Projet 3",
-        "domain": "Photographie",
-        "year": "2025"
+        "title": "Jardinons",
+        "domain": "Interface",
+        "year": "2022",
+        "link": "projet_1.html"
     },
     {
-        "title": "Projet 3",
+        "title": "Kelly",
         "domain": "Photographie",
-        "year": "2025",
+        "year": "2023",
+        "link": "kelly.html"
     },
     {
-        "title": "Projet 3",
-        "domain": "Photographie",
-        "year": "2025",
-    },
-    {
-        "title": "Projet 3",
-        "domain": "Photographie",
-        "year": "2025",
+        "title": "Bionimal",
+        "domain": "Diploma project",
+        "year": "2023",
+        "link": "projet_1.html"
     },
 ]
-const table = document.getElementById("table");
-for (element of content) {
+
+
+for (const element of content) {
     const tr = document.createElement("tr");
 
-    const tdTitle = document.createElement("td");
-    const tdDomain = document.createElement("td");
-    const tdYear = document.createElement("td");
+    const createCell = (text, classNames) => {
+        const td = document.createElement("td");
+        const link = document.createElement("a");
+        link.href = element.link;
+        link.innerText = text;
+        td.appendChild(link);
+        td.className = classNames;
+        return td;
 
-    tdTitle.classList.add("col-2")
-    tdYear.classList.add("col-2")
-    tdDomain.classList.add("col-2")
+    };
 
-    tdTitle.innerHTML = element.title;
-    tdDomain.innerHTML = element.domain;
-    tdYear.innerHTML = element.year;
+    tr.appendChild(createCell(element.year,"col-1 yearcol"));
+    tr.appendChild(createCell(element.title,"col-1 titlecol"));
+    tr.appendChild(createCell(element.domain,"col-1 domaincol"));
 
-    tr.appendChild(tdYear);
-    tr.appendChild(tdTitle);
-    tr.appendChild(tdDomain);
-   
     table.appendChild(tr);
-
 }

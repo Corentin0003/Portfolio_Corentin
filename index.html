@@ -10,84 +10,278 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
+
+<script>
+
+    $(document).ready(function () {
+        window.onload = function () {
+            $('.loader').fadeOut(500, function () { $('.loader').remove(); });
+        }
+
+        var isAbout = true;
+
+
+        $(".contact").hover(function(){
+          $(this).css("cursor", "pointer")
+          $(this).text("LEARN MORE ABOUT ME")
+        })
+
+        $(".contact").mouseleave(function(){
+            $(this).text("ABOUT")
+        })
+
+
+
+        function showAboutSection() {
+            isAbout = !isAbout;
+            $(".contact-info").toggle();
+            $(".video-intro").toggleClass("left");
+            $(".video-intro").toggleClass("video_movetop");
+            $(".selected-work-mobile").toggleClass("d-block")
+            $(".selected-work-mobile").toggleClass("col-6")
+            $(".selected-work-mobile").toggleClass("projet_movetop")
+            $(".selected-work").toggleClass("d-none")
+            $(".about").toggleClass("d-none")
+            $(".close").toggleClass("d-none")
+            $(".contact").toggleClass("d-none")
+
+
+            isAbout = !isAbout;
+
+                if (isAbout) {
+                    $('.contact').text('CLOSE');
+                    isAbout = !isAbout
+                } else {
+                    $('.contact').text('ABOUT');
+                    isAbout = !isAbout  
+                };
+
+                const nouvelleURL = window.location.pathname;
+                window.history.replaceState({}, document.title, nouvelleURL);
+
+            };     
+            
+            const urlParams = new URLSearchParams(window.location.search);
+            const showAbout = urlParams.get('showAbout');
+
+            if (showAbout === 'true') {
+                showAboutSection();
+            };
+
+            $(".contact").click(function(){
+                showAboutSection();
+            });
+
+            $(".close").hover(function(){
+                $(this).css("cursor", "pointer")
+            });
+
+            $(".close").click(function(){
+                showAboutSection();
+            });
+
+
+        $('.projet').each(function () {
+            $(this).data('project-title');
+        });
+
+        $(".projet").hover(function () {
+            $(this).css("color", "white");
+            $(this).animate({ top: "-=20px" });
+            $(".project-title").text('' + $(this).data('project-title'));
+            $(".project-title-container").removeClass("d-none")
+            $(".video-intro").addClass('d-none')
+        });
+
+        $(".projet").mouseleave(function () {
+            $(this).css("color", "black");
+            $(this).stop().animate({ top: "+=20px" });
+            $(".project-title").text("Titre projet");
+            $(".project-title-container").addClass("d-none")
+            $(".video-intro").removeClass('d-none')
+        })
+
+
+    });
+</script>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="loader d-flex justify-content-center align-items-center">
+        <p class="loadingtext flip-diagonal-2-fwd">C</p>
+    </div>
+
+    <nav class="navbar navbar-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <h1>Corentin Maurer</h1>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">CONTACT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">INDEX</a>
-                    </li>
-                </ul>
-            </div>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <p class="contact">ABOUT</p> 
+                    <p class="close d-none">CLOSE</p>
+                </li>
+            </ul>
         </div>
     </nav>
 
+    <div class="align-content-center">
+        <video class="video-intro" autoplay loop muted>
+            <source src="TestV2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="project-title-container d-none">
+        <h3 class="project-title">Titre de projet</h3>
+    </div>
+
     <section class="selected-work desktop">
+
+
         <div class="selected-work-list-desktop">
-        <div class="row selected-work-list-first">
-            <h2 class="projet text-center">Projet 1</h2>
-        </div>
-        <div class="row d-flex justify-content-between selected-work-list-second">
-            <div class="col-4">
-                <h2 class="projet text-center">Projet 2</h2>
+            <div class="row justify-content-center selected-work-list-first">
+                <div class="projet d-flex justify-content-center">
+                    <a class="projet-lien" href="exquisite_times.html">
+                        <h2 class="projet text-center" data-project-title="2019 - Exquisite Times">Project 1</h2>
+                    </a>
+                </div>
             </div>
-            <div class="col-4">
-                <h2 class="projet text-center">Projet 3</h2>
+
+            <div class="row d-flex justify-content-between selected-work-list-second">
+                <div class="col-3 d-flex justify-content-center">
+                    <a href="kelly.html">
+                        <h2 class="projet text-center" data-project-title="2023 - Kelly">Project 2</h2>
+                    </a>
+                </div>
+                <div class="d-flex justify-content-center col-3">
+                    <a href="union_neuchatel_basket.html">
+                        <h2 class="projet text-center" data-project-title="2022 - Union Neuchatel Basket">Project 3</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-between selected-work-list-third">
+                <div class="col-4 text-center flex-column justify-content-center">
+                    <a href="jardinons.html">
+                        <h2 class="projet text-center" data-project-title="2022 - Jardinons">Project 4</h2>
+                    </a>
+                </div>
+                <div class="col-4 d-flex justify-content-center">
+                    <a href="bionimal.html">
+                        <h2 class="projet text-center" data-project-title="2023 - Bionimal">Project 5</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="row selected-work-list-last">
+                <div class="d-flex justify-content-center">
+                    <a href="album_cover.html">
+                        <h2 class="projet text-center" data-project-title="2021 - Album Cover">Project 6</h2>
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="row d-flex justify-content-between selected-work-list-third">
-            <div class="col-4">
-                <h2 class="projet text-center">Projet 4</h2>
-            </div>
-            <div class="col-4">
-                <h2 class="projet text-center">Projet 5</h2>
-            </div>
         </div>
-        <div class="row selected-work-list-first">
-            <h2 class="projet text-center">Projet 6</h2>
-        </div>
-</div>
     </section>
 
-    <section class="selected-work mobile">
+    <div class="row col-6 about position-fixed d-none">
+       <!-- <p>I'm Corentin, a 20 years Interactive Media Designer who graduated from the School of Applied Arts in La
+            Chaux-de-Fonds. My passion lies in the dynamic intersection of art and technology, where I bring creative
+            concepts to life through interactive and visually engaging experiences. -->
+        </p>
+
+        <div class="experiences">
+            <div class="row mb-1">
+                <p class="col-3 date">2018 – 2023</p>
+                <p class="col-9">Applied School of Arts - La Chaux-de-Fonds (NE)</p>
+            </div>
+
+            <div class="row mb-1">
+                <p class="col-3 date">July 2020</p>
+                <p class="col-9">Assistant on set of "Dernière chanson" by Bastien Bron</p>
+            </div>
+
+            <div class="row mb-1">
+                <p class="col-3 date">August 2021</p>
+                <p class="col-9">Runner on set of "New Wave" by Fauve Rage</p>
+            </div>
+
+            <div class="row mb-1">
+                <p class="col-3 date">Since 2022</p>
+                <p class="col-9">Team Solid Vice-President, swiss esport association</p>
+            </div>
+
+            <div class="row mb-1">
+                <p class="col-3 date">2022</p>
+                <p class="col-9">Worked at Syphon, Biel <br> (communication, photography)</p>
+            </div>
+
+            <div class="row mb-1">
+                <p class="col-3 date">May 2022</p>
+                <p class="col-9">3-days internship with David Marchon, press photographer</p>
+            </div>
+
+            <div class="row mb-1">
+                <div class="col-3 date">2024</div>
+                <div class="col-9">Internship at your agency ?</div>
+            </div>
+        </div>
+
+
+        <div class="row contact-details-container align-content-end">
+            <h3 class="contact-details">contact@corentinmaurer.ch <br>
+                +41 (0)788048976 <br> @_co.rentin__
+            </h3>
+        </div>
+    </div>
+
+
+    <section class="selected-work-mobile">
+        <div class="video"></div>
         <div class="row selected-work-list">
-            <a href="#"><h2 class="projet text-center">Projet 1</h2></a>
-            <a href="#"><h2 class="projet text-center">Projet 2</h2></a>
-            <a href="#"><h2 class="projet text-center">Projet 3</h2></a>
-            <a href="#"><h2 class="projet text-center">Projet 4</h2></a>
-            <a href="#"><h2 class="projet text-center">Projet 5</h2></a>
-            <a href="#"><h2 class="projet text-center">Projet 6</h2></a>
+            <a href="exquisite_times.html">
+                <h2 class="text-center">Project 1</h2>
+            </a>
+            <a href="kelly.html">
+                <h2 class="text-center">Project 2</h2>
+            </a>
+            <a href="union_neuchatel_basket.html">
+                <h2 class="text-center">Project 3</h2>
+            </a>
+            <a href="">
+                <h2 class="text-center">Project 4</h2>
+            </a>
+            <a href="#">
+                <h2 class="text-center">Project 5</h2>
+            </a>
+            <a href="#">
+                <h2 class="text-center">Project 6</h2>
+            </a>
         </div>
     </section>
 
     <section class="index container">
-        <h3 class="index-title">Index</h3>
+        <div>
+            <h3 class="index-title">Index</h3>
+            <h3 class="arrow slide-top">↓</h3>
+        </div>
+
         <table id="table">
-            <thead>
-                <tr class="row">
-                    <th>Title</th>
-                    <th>Domain</th>
-                    <th>Year</th>
-                </tr>
-            </thead>            
+            <tr class="theader">
+                <td class="col-1 indextitle">Year</td>
+                <td class="col-1 indextitle">Name</td>
+                <td class="col-1 indextitle">Type</td>
+            </tr>
         </table>
     </section>
+
+
+
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 <script src="script.js"></script>
 
 </html>
