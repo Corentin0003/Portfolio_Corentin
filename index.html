@@ -25,7 +25,7 @@
 
         $(".contact").hover(function(){
           $(this).css("cursor", "pointer")
-          $(this).text("LEARN MORE ABOUT ME")
+          $(this).text("MORE ABOUT ME")
         })
 
         $(".contact").mouseleave(function(){
@@ -39,9 +39,11 @@
             $(".contact-info").toggle();
             $(".video-intro").toggleClass("left");
             $(".video-intro").toggleClass("video_movetop");
+            $(".video-intro").toggleClass("display_mobile_none");
             $(".selected-work-mobile").toggleClass("d-block")
-            $(".selected-work-mobile").toggleClass("col-6")
+            $(".selected-work-mobile").toggleClass("col-lg-6")
             $(".selected-work-mobile").toggleClass("projet_movetop")
+            $(".selected-work-mobile").toggleClass("display_mobile_none")
             $(".selected-work").toggleClass("d-none")
             $(".about").toggleClass("d-none")
             $(".close").toggleClass("d-none")
@@ -127,7 +129,7 @@
         </div>
     </nav>
 
-    <div class="align-content-center">
+    <div class="align-content-center d-block">
         <video class="video-intro" autoplay loop muted>
             <source src="TestV2.mp4" type="video/mp4">
             Your browser does not support the video tag.
@@ -152,7 +154,7 @@
 
             <div class="row d-flex justify-content-between selected-work-list-second">
                 <div class="col-3 d-flex justify-content-center">
-                    <a href="kelly.html">
+                    <a href="kelly">
                         <h2 class="projet text-center" data-project-title="2023 - Kelly">Project 2</h2>
                     </a>
                 </div>
@@ -185,7 +187,7 @@
         </div>
     </section>
 
-    <div class="row col-6 about position-fixed d-none">
+    <div class="row col-lg-6 col-md-12 col-sm-12 about position-fixed d-none">
        <!-- <p>I'm Corentin, a 20 years Interactive Media Designer who graduated from the School of Applied Arts in La
             Chaux-de-Fonds. My passion lies in the dynamic intersection of art and technology, where I bring creative
             concepts to life through interactive and visually engaging experiences. -->
@@ -230,8 +232,8 @@
 
 
         <div class="row contact-details-container align-content-end">
-            <h3 class="contact-details">contact@corentinmaurer.ch <br>
-                +41 (0)788048976 <br> @_co.rentin__
+            <h3 class="contact-details"> <a href="mailto:corentin@corentinmaurer.ch">contact@corentinmaurer.ch</a> <br>
+                <a href="tel:+41788048976">+41 (0)788048976</a> <br> @_co.rentin__
             </h3>
         </div>
     </div>

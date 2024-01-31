@@ -147,7 +147,7 @@ h3 {
 .selected-work-mobile {
     display: block;
     position: fixed;
-    top: 25%;
+    top: 16%;
 }
 
 .video {
@@ -260,7 +260,7 @@ aside{
 }
 
 .about{
-    left: 50%;
+    left: 0%;
     margin-top: 60px;
     font-size: 22px;
     padding-left: 35px;
@@ -270,10 +270,11 @@ aside{
 .experiences{
     font-size: 15px;
     margin-top: -250px;
+    padding-top: 80px;
 }
 
 .contact-details-container{
-    margin-bottom: 80px;
+    margin-bottom: 180px;
 }
 
 .contact-details{
@@ -286,6 +287,10 @@ aside{
 }
 .jardinons{
     margin: auto;
+}
+
+.display_mobile_none{
+    display: none !important;
 }
 
 
@@ -365,6 +370,12 @@ aside{
     .img_projet{
         position: absolute;
         margin-top: 40px;
+    }
+    .display_mobile_none{
+        display: block !important;
+    }
+    .about{
+        left: 50%;
     }
 }
 

@@ -30,8 +30,8 @@ const content = [
         "link": "projet_1.html"
     },
     {
-        "title": "Union Neuchâtel",
-        "domain": "Photographie",
+        "title": "Union Neuchatel",
+        "domain": "Photography",
         "year": "2021",
         "link": "union_neuchatel_basket"
     },
@@ -49,7 +49,7 @@ const content = [
     },
     {
         "title": "Kelly",
-        "domain": "Photographie",
+        "domain": "Photography",
         "year": "2023",
         "link": "kelly.html"
     },
