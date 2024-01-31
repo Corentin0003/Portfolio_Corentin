@@ -26,15 +26,16 @@ function removeClassBasedOnWidth() {
     }
 
     $(document).ready(function () {
-        removeClassBasedOnWidth();
-
-        $(window).resize(function () {
-        removeClassBasedOnWidth();
-      });
-
         window.onload = function () {
             $('.loader').fadeOut(500, function () { $('.loader').remove(); });
         }
+
+        removeClassBasedOnWidth();
+
+        $(window).resize(function () {
+            removeClassBasedOnWidth();
+        });
+
 
         $('.contact').on('click', function(e) {
                 e.preventDefault();
