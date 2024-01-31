@@ -261,7 +261,7 @@ aside{
 
 .about{
     left: 0%;
-    margin-top: 45px;
+    padding-top: 0px;
     font-size: 22px;
     padding-left: 10px;
     height: 100%;
@@ -272,7 +272,7 @@ aside{
 }
 
 .contact-details-container{
-    margin-bottom: 160px;
+    margin-bottom: 8px;
 }
 
 .contact-details{
@@ -302,14 +302,14 @@ aside{
   }
   .experiences{
     font-size: 17px !important;
-    margin-top: -250px;
-    padding-top: 80px;
+    padding-top: 60px;
 }
 .selected-work-mobile {
     display: block;
     position: fixed;
     top: 25%;
 }
+
 }
 
 
@@ -322,11 +322,12 @@ aside{
         display: block !important;
     }
     .about{
-        left: 50%;
+        left: 50%;  
     }
     .contact-details{
         text-align: left;
         font-size: 35px;
+        padding-bottom: 10px;
     }
     h2{
         font-size: 40px;
