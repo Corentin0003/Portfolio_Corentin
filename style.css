@@ -69,7 +69,7 @@ h2 {
     -webkit-text-stroke-width: 0.8px;
     -webkit-text-stroke-color: white;
     color: black;
-    font-size: 40px;
+    font-size: 30px;
     width: auto !important;
     cursor: pointer;
     opacity: 100%;
@@ -109,14 +109,15 @@ nav {
 
 .contact-details{
     text-align: right;
+    font-size: 28px;
 }
 
-
-h3 {
+h3{
     font-size: 35px;
     text-align: center;
     color: white;
 }
+
 
 .selected-work {
     width: 100vw;
@@ -243,7 +244,6 @@ aside{
 
 }
 
-
 .img_projet_center{
     position: relative;
 }
@@ -261,20 +261,18 @@ aside{
 
 .about{
     left: 0%;
-    margin-top: 60px;
+    margin-top: 45px;
     font-size: 22px;
-    padding-left: 35px;
+    padding-left: 10px;
     height: 100%;
 }
 
 .experiences{
-    font-size: 15px;
-    margin-top: -250px;
-    padding-top: 80px;
+    font-size: 14px !important;
 }
 
 .contact-details-container{
-    margin-bottom: 180px;
+    margin-bottom: 160px;
 }
 
 .contact-details{
@@ -296,6 +294,40 @@ aside{
 
 
 /*MEDIAQUERY*/
+
+@media (min-width: 500px) {
+  
+  h2{
+    font-size: 40px;
+  }
+  .experiences{
+    font-size: 17px !important;
+    margin-top: -250px;
+    padding-top: 80px;
+}
+}
+
+
+@media (min-width: 994px) {
+    .img_projet{
+        position: absolute;
+        margin-top: 40px;
+    }
+    .display_mobile_none{
+        display: block !important;
+    }
+    .about{
+        left: 50%;
+    }
+    .contact-details{
+        text-align: left;
+        font-size: 35px;
+    }
+    h2{
+        font-size: 35px;
+      }
+}
+
 @media (min-width: 1199px) {
     .selected-work-mobile {
         display: none;
@@ -366,18 +398,6 @@ aside{
     }
 }
 
-@media (min-width: 994px) {
-    .img_projet{
-        position: absolute;
-        margin-top: 40px;
-    }
-    .display_mobile_none{
-        display: block !important;
-    }
-    .about{
-        left: 50%;
-    }
-}
 
 
 
