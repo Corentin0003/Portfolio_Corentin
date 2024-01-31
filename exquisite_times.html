@@ -14,7 +14,24 @@
 </head>
 
 <script>
+
+function removeClassBasedOnWidth() {
+        var windowWidth = $(window).width();
+
+      if (windowWidth < 994) {
+        $('img').addClass('mobile_100');
+      } else{
+        $('img').removeClass('mobile_100');
+      }
+    }
+
     $(document).ready(function () {
+        removeClassBasedOnWidth();
+
+        $(window).resize(function () {
+        removeClassBasedOnWidth();
+      });
+
         window.onload = function () {
             $('.loader').fadeOut(500, function () { $('.loader').remove(); });
         }
@@ -79,10 +96,10 @@
 
     <section class="img_projet d-flex flex-column">
     
-        <img src="img/Equisite_Times.png" width="75%" class="mt-3 img-fluid img_projet_center" alt="Exquisite Times">
-        <img src="img/Equisite_Times_2.png" width="70%" class="img-fluid img_projet_center" alt="Exquisite Times">
-        <img src="img/Equisite_Times_5.png" width="40%" class="img-fluid img_projet_center" alt="Exquisite Times">
-        <img src="img/Equisite_Times_4.png" width="40%" class="img-fluid img_projet_center" alt="Exquisite Times">
+        <img src="img/Equisite_Times.png" width="75%" class="mt-3 img-fluid img_projet_center mobile_100" alt="Exquisite Times">
+        <img src="img/Equisite_Times_2.png" width="70%" class="img-fluid img_projet_center mobile_100" alt="Exquisite Times">
+        <img src="img/Equisite_Times_5.png" width="40%" class="img-fluid img_projet_center mobile_100" alt="Exquisite Times">
+        <img src="img/Equisite_Times_4.png" width="40%" class="img-fluid img_projet_center mobile_100" alt="Exquisite Times">
        
     
     </section>

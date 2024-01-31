@@ -234,14 +234,17 @@ aside{
 .img_projet{
     position: absolute;
     margin-top: 30px;
-    width: auto;
 }
 
 .img_projet img{
     margin-bottom: 70px;
     left: 50%;
     transform: translateX(-50%);
+}
 
+.mobile_100{
+    width: 100%;
+    margin: auto;
 }
 
 .img_projet_center{
