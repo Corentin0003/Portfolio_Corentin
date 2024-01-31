@@ -233,7 +233,7 @@ aside{
 
 .img_projet{
     position: absolute;
-    margin-top: 700px;
+    margin-top: 30px;
     width: auto;
 }
 
@@ -305,6 +305,11 @@ aside{
     margin-top: -250px;
     padding-top: 80px;
 }
+.selected-work-mobile {
+    display: block;
+    position: fixed;
+    top: 25%;
+}
 }
 
 
@@ -324,13 +329,8 @@ aside{
         font-size: 35px;
     }
     h2{
-        font-size: 35px;
+        font-size: 40px;
       }
-      .selected-work-mobile {
-        display: block;
-        position: fixed;
-        top: 16%;
-    }
 }
 
 @media (min-width: 1199px) {
