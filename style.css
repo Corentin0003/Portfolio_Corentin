@@ -148,7 +148,7 @@ h3{
 .selected-work-mobile {
     display: block;
     position: fixed;
-    top: 16%;
+    top: 9%;
 }
 
 .video {
@@ -326,6 +326,11 @@ aside{
     h2{
         font-size: 35px;
       }
+      .selected-work-mobile {
+        display: block;
+        position: fixed;
+        top: 16%;
+    }
 }
 
 @media (min-width: 1199px) {
