@@ -19,6 +19,21 @@
             $('.loader').fadeOut(500, function () { $('.loader').remove(); });
         }
 
+        function removeClassBasedOnWidth() {
+            var windowWidth = $(window).width();
+
+            if (windowWidth < 994) {
+                $('img').addClass('mobile_100');
+            } else {
+                $('img').removeClass('mobile_100');
+            }
+        }
+        removeClassBasedOnWidth();
+
+        $(window).resize(function () {
+            removeClassBasedOnWidth();
+        });
+
         $('.contact').on('click', function(e) {
                 e.preventDefault();
                 window.location.href = 'index.html?showAbout=true';
@@ -83,14 +98,14 @@
             Your browser does not support the video tag.
         </video>
 
-            <img src="img/Jardinons_Home.png" width="45%" class="mt-5 img-fluid img_projet_center" alt="Exquisite Times">
+            <img src="img/Jardinons_Home.png" width="45%" class="mt-5 img-fluid img_projet_center mobile_100" alt="Exquisite Times">
             <div class="d-flex two_img">
-                <img src="img/Jardinons_Journal_2.png" width="45%" class="mt-5 img-fluid" alt="Exquisite Times">
-                <img src="img/Jardinons_Journal.png" width="45%" class="mt-5 img-fluid" alt="Exquisite Times">
+                <img src="img/Jardinons_Journal_2.png" width="45%" class="mt-5 img-fluid mobile_100" alt="Exquisite Times">
+                <img src="img/Jardinons_Journal.png" width="45%" class="mt-5 img-fluid mobile_100" alt="Exquisite Times">
             </div>
-            <img src="img/Jardinons_Explorer.png" width="45%" class="mt-5 img-fluid img_projet_center" alt="Exquisite Times">
-            <img src="img/Jardinons_Liens.png" width="45%" class="mt-5 img-fluid img_projet_center" alt="Exquisite Times">
-            <img src="img/Jardinons_Notifications.png" width="45%" class="mt-5 img-fluid img_projet_center" alt="Exquisite Times">
+            <img src="img/Jardinons_Explorer.png" width="45%" class="mt-5 img-fluid img_projet_center mobile_100" alt="Exquisite Times">
+            <img src="img/Jardinons_Liens.png" width="45%" class="mt-5 img-fluid img_projet_center mobile_100" alt="Exquisite Times">
+            <img src="img/Jardinons_Notifications.png" width="45%" class="mt-5 img-fluid img_projet_center mobile_100" alt="Exquisite Times">
 
 
             

@@ -19,6 +19,21 @@
             $('.loader').fadeOut(500, function () { $('.loader').remove(); });
         }
 
+        function removeClassBasedOnWidth() {
+            var windowWidth = $(window).width();
+
+            if (windowWidth < 994) {
+                $('img').addClass('mobile_100');
+            } else {
+                $('img').removeClass('mobile_100');
+            }
+        }
+        removeClassBasedOnWidth();
+
+        $(window).resize(function () {
+            removeClassBasedOnWidth();
+        });
+
         $('.contact').on('click', function(e) {
                 e.preventDefault();
                 window.location.href = 'index.html?showAbout=true';
@@ -79,10 +94,10 @@
 
     <section class="img_projet d-flex flex-column">
     
-        <img src="img/Osmose.png" width="46%" class="mt-5 img-fluid img_projet_center" alt="Exquisite Times">
-        <img src="img/Osmose_2.jpg" width="46%" class="mt-5 img-fluid img_projet_center" alt="Exquisite Times">
-        <img src="img/Osmose_3.jpg" width="46%" class="mt-5 img-fluid img_projet_center" alt="Exquisite Times">
-        <img src="img/Equisite_Times_4.png" width="0%" class="img-fluid img_projet_center" alt="Exquisite Times">
+        <img src="img/Osmose.png" width="46%" class="mt-5 img-fluid img_projet_center mobile_100" alt="Exquisite Times">
+        <img src="img/Osmose_2.jpg" width="46%" class="mt-5 img-fluid img_projet_center mobile_100" alt="Exquisite Times">
+        <img src="img/Osmose_3.jpg" width="46%" class="mt-5 img-fluid img_projet_center mobile_100" alt="Exquisite Times">
+        <img src="img/Equisite_Times_4.png" width="0%" class="img-fluid img_projet_center mobile_100" alt="Exquisite Times">
        
     
     </section>

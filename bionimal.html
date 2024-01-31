@@ -19,6 +19,21 @@
             $('.loader').fadeOut(500, function () { $('.loader').remove(); });
         }
 
+        function removeClassBasedOnWidth() {
+            var windowWidth = $(window).width();
+
+            if (windowWidth < 994) {
+                $('img').addClass('mobile_100');
+            } else {
+                $('img').removeClass('mobile_100');
+            }
+        }
+        removeClassBasedOnWidth();
+
+        $(window).resize(function () {
+            removeClassBasedOnWidth();
+        });
+
         $('.contact').on('click', function(e) {
                 e.preventDefault();
                 window.location.href = 'index.html?showAbout=true';
