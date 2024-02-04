@@ -33,19 +33,19 @@ const content = [
         "title": "Union Neuchatel",
         "domain": "Photography",
         "year": "2021",
-        "link": "union_neuchatel_basket"
+        "link": "union_neuchatel_basket.html"
     },
     {
         "title": "Album cover",
         "domain": "Graphic design",
         "year": "2022",
-        "link": "projet_1.html"
+        "link": "album_cover.html"
     },
     {
         "title": "Jardinons",
         "domain": "Interface",
         "year": "2022",
-        "link": "projet_1.html"
+        "link": "jardinons.html"
     },
     {
         "title": "Kelly",
@@ -57,7 +57,7 @@ const content = [
         "title": "Bionimal",
         "domain": "Diploma project",
         "year": "2023",
-        "link": "projet_1.html"
+        "link": "bionimal.html"
     },
 ]
 
