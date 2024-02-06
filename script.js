@@ -15,7 +15,7 @@ const content = [
         "title": "Daido Moryama",
         "domain": "Interface",
         "year": "2019",
-        "link": "projet_1.html"
+        "link": "bionimal.html"
     },
     {
         "title": "Exquisite Times",
@@ -27,7 +27,7 @@ const content = [
         "title": "EAA Opendays",
         "domain": "Visual Identity",
         "year": "2019",
-        "link": "projet_1.html"
+        "link": "bionimal.html"
     },
     {
         "title": "Union Neuchatel",
