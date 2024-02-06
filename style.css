@@ -159,7 +159,7 @@ h3{
     display: none;
 }
 
-.index {
+.index{
     position: absolute;
     bottom: -355px;
     z-index: 10;
