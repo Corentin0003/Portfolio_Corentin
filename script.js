@@ -27,7 +27,7 @@ const content = [
         "title": "EAA Opendays",
         "domain": "Visual Identity",
         "year": "2019",
-        "link": "bionimal.html"
+        "link": "eaa_opendays.html"
     },
     {
         "title": "Union Neuchatel",
