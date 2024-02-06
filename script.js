@@ -65,6 +65,12 @@ const content = [
         "year": "2023",
         "link": "bionimal.html"
     },
+    {
+        "title": "Portfolio",
+        "domain": "Website",
+        "year": "2024",
+        "link": "bionimal.html"
+    },
 ]
 
 
