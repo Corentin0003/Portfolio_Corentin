@@ -13,7 +13,7 @@ const content = [
     
     {
         "title": "Daido Moryama",
-        "domain": "Interface",
+        "domain": "Web prototype",
         "year": "2019",
         "link": "bionimal.html"
     },
@@ -26,8 +26,14 @@ const content = [
     {
         "title": "EAA Opendays",
         "domain": "Visual Identity",
-        "year": "2019",
+        "year": "2020",
         "link": "eaa_opendays.html"
+    },
+    {
+        "title": "Favourite series",
+        "domain": "Poster",
+        "year": "2020",
+        "link": "favourite_series.html"
     },
     {
         "title": "Union Neuchatel",
