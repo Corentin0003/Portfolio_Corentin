@@ -134,6 +134,15 @@ h3{
     transition: 0.3s ease;
 }
 
+.grand_h2_container{
+    opacity: 0; /* Définir l'opacité initiale de la grande div à 0 */
+}
+
+.h2_container h2{
+    opacity: 0; /* Définir l'opacité initiale à 0 pour les éléments h2 */
+    transition: opacity 1s ease; /* Ajouter une transition d'opacité de 1 seconde */
+}
+
 .selected-work-list-first,
 .selected-work-list-second,
 .selected-work-list-third, 
